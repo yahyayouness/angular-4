@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.0/Rx.min.js"></script>
+    <script>
+    var arr = ['value 1','value 2','value 3','value 4'];
+    var source = Rx.Observable.from(arr);
+    
+    
+
+    source.subscribe(function(data){
+        console.log("obs1 "+data);
+    });
+    
+    source.subscribe(function(data){
+        console.log("obs2 "+data);
+    });
+    
+    
+    
+    </script>
+</head>
+<body>
+    TP2
+</body>
+</html>

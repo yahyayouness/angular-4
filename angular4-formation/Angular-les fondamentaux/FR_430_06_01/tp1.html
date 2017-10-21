@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.0/Rx.min.js"></script>
+    <script>
+    var arr = ['value 1','value 2','value 3','value 4'];
+    
+    var observable = Rx.Observable.create(function(observer){
+        for(let val of arr){
+            observer.next(val)
+        }
+    });
+
+
+    observable.subscribe(function(data){
+        console.log("obs1 "+data);
+    });
+    
+    observable.subscribe(function(data){
+        console.log("obs2 "+data);
+    });
+    
+    
+    
+    </script>
+</head>
+<body>
+    TP1
+</body>
+</html>
